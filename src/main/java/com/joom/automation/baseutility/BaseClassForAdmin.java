@@ -27,7 +27,7 @@ public class BaseClassForAdmin {
 	}
 	@BeforeSuite
 	public void congfigBC() throws ParseException, IOException, Throwable {
-		Reporter.log("=== Launching Browser: true");
+		Reporter.log("=== Launching Browser", true);
 		JsonForAdminUtility jad=new JsonForAdminUtility();
 		String browser=jad.readDataFromJson("browser");
 

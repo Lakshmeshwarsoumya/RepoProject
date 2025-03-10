@@ -7,21 +7,21 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UserLoginPage {
 
-	WebDriver driver;
+WebDriver driver;
 
 	public UserLoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
-
-	@FindBy(id = "exampleInputEmail1")
+	
+	@FindBy(name  ="email")
 	private WebElement Emailtxtfield;
 
 	@FindBy(name = "password")
 	private WebElement Passwordtxtfield;
 
-	@FindBy(name = "login")
+	@FindBy(linkText = "Login")
 	private WebElement loginbtn;
 
 	public WebElement getLoginbtn() {
@@ -36,8 +36,8 @@ public class UserLoginPage {
 		return Passwordtxtfield;
 	}
    
-	public void LoginAsUser(String email,String password) {
-		getEmailtxtfield().sendKeys(email);
+	public void LoginAsUser(String username,String password) {
+		getEmailtxtfield().sendKeys(username);
 		getPasswordtxtfield().sendKeys(password);
 		getLoginbtn().click();
 	
