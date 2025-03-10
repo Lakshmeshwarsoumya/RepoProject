@@ -70,6 +70,16 @@ public class UserSignUpPage {
 		return SignUpbtn;
 	}
 	
+	public void SignUpAsUser(String Fullname,String Email, String password,String Confirmpassword) {
+		getFullNametxtfield().sendKeys(Fullname);
+		getEmailtxtfield().sendKeys(Email);
+		getPasswordtxtfield().sendKeys(password);
+		getConfirmPasswordtxtfield().sendKeys(Confirmpassword);
+		getSignUpbtn().click();
+		
+		
+	}
+	
 	
 	
 	

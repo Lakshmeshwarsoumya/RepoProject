@@ -35,5 +35,13 @@ public class UserLoginPage {
 	public WebElement getPasswordtxtfield() {
 		return Passwordtxtfield;
 	}
-
+   
+	public void LoginAsUser(String email,String password) {
+		getEmailtxtfield().sendKeys(email);
+		getPasswordtxtfield().sendKeys(password);
+		getLoginbtn().click();
+	
+		
+	}
+	
 }
