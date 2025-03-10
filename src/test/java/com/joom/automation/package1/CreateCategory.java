@@ -11,11 +11,17 @@ import com.google.protobuf.TextFormat.ParseException;
 import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.generic.fileutility.JsonForAdminUtility;
 import com.joom.automation.objectrepository.AdminLoginPage;
+import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.HomePage;
 
-public class ShoppingCart extends BaseClassForAdmin {
+public class CreateCategory extends BaseClassForAdmin {
 	@Test
-	public void addProductToCart() throws ParseException, IOException, Throwable {
+	public void createCategory() throws ParseException, IOException, Throwable {
+		adp=new AdminPage(driver);
+		adp.getCreateCategoryLink().click();
+		
+		
+		
 		
 
 		

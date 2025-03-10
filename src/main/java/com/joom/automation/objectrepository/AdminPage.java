@@ -12,6 +12,9 @@ public class AdminPage {
 	@FindBy(xpath = "//a[@href='todays-orders.php']")
 	private WebElement todaysOrdersLink;
 
+	@FindBy(linkText = " Create Category ")
+	private WebElement createCategoryLink;
+
 	@FindBy(xpath = "//img[@class='nav-avatar']")
 	private WebElement logoutIcon;
 
@@ -31,6 +34,10 @@ public class AdminPage {
 		return todaysOrdersLink;
 	}
 
+	public WebElement getCreateCategoryLink() {
+		return createCategoryLink;
+	}
+
 	public WebElement getLogoutIcon() {
 		return logoutIcon;
 	}
@@ -38,6 +45,7 @@ public class AdminPage {
 	public WebElement getLogoutLink() {
 		return logoutLink;
 	}
+
 	public void logout() {
 		logoutIcon.click();
 		logoutLink.click();
