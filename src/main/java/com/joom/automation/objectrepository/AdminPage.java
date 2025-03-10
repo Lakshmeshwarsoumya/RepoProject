@@ -12,6 +12,12 @@ public class AdminPage {
 	@FindBy(xpath = "//a[@href='todays-orders.php']")
 	private WebElement todaysOrdersLink;
 
+	@FindBy(xpath = "//img[@class='nav-avatar']")
+	private WebElement logoutIcon;
+
+	@FindBy(linkText = "Logout")
+	private WebElement logoutLink;
+
 	public AdminPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 
@@ -23,6 +29,18 @@ public class AdminPage {
 
 	public WebElement getTodaysOrdersLink() {
 		return todaysOrdersLink;
+	}
+
+	public WebElement getLogoutIcon() {
+		return logoutIcon;
+	}
+
+	public WebElement getLogoutLink() {
+		return logoutLink;
+	}
+	public void logout() {
+		logoutIcon.click();
+		logoutLink.click();
 	}
 
 }
