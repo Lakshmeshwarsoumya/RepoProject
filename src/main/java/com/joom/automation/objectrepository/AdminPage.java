@@ -6,13 +6,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AdminPage {
+	WebDriver driver;
+
 	@FindBy(xpath = "(//a[@data-toggle='collapse'])[2]")
 	private WebElement orderMgmtLink;
 
 	@FindBy(xpath = "//a[@href='todays-orders.php']")
 	private WebElement todaysOrdersLink;
 
-	@FindBy(xpath="//a[text()=' Create Category ']")
+	@FindBy(xpath = "//a[text()=' Create Category ']")
 	private WebElement createCategoryLink;
 
 	@FindBy(xpath = "//img[@class='nav-avatar']")
@@ -44,6 +46,12 @@ public class AdminPage {
 
 	public WebElement getLogoutLink() {
 		return logoutLink;
+	}
+
+	public void todaysOrders() {
+
+		getOrderMgmtLink().click();
+		getTodaysOrdersLink().click();
 	}
 
 	public void logout() {
