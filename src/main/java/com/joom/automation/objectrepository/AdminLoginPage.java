@@ -1,4 +1,8 @@
 package com.joom.automation.objectrepository;
+/*
+ *  @author soumya
+ *  Contains Contact Page elements and Business Librariries
+ */
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,6 +34,12 @@ public class AdminLoginPage {
 
 	public WebElement getLoginButton() {
 		return loginButton;
+	}
+
+	public void adminLogin(String username, String password) {
+		adminTextField.sendKeys(username);
+		adminPasswordTextField.sendKeys(password);
+		loginButton.click();
 	}
 
 }
