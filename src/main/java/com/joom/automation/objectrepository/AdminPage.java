@@ -12,7 +12,7 @@ public class AdminPage {
 	@FindBy(xpath = "//a[@href='todays-orders.php']")
 	private WebElement todaysOrdersLink;
 
-	@FindBy(linkText = " Create Category ")
+	@FindBy(xpath="//a[text()=' Create Category ']")
 	private WebElement createCategoryLink;
 
 	@FindBy(xpath = "//img[@class='nav-avatar']")

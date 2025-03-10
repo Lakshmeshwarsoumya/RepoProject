@@ -9,7 +9,7 @@ public class CreateCategoryPage {
 	@FindBy(xpath = "//input[@placeholder='Enter category Name']")
 	private WebElement categoryNameTextField;
 
-	@FindBy(className = "description")
+	@FindBy(name = "description")
 	private WebElement descriptionTextField;
 
 	@FindBy(xpath = "//button[text()='Create']")
@@ -30,6 +30,11 @@ public class CreateCategoryPage {
 	public WebElement getCreateButton() {
 		return createButton;
 	}
-	
+
+	public void createCategory(String textfield, String description) {
+		categoryNameTextField.sendKeys(textfield);
+		descriptionTextField.sendKeys(description);
+		createButton.click();
+	}
 
 }

@@ -17,55 +17,55 @@
       <![CDATA[=== Closing DB Connection and Generating Reports ===]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-10T17:18:52 IST" name="Default suite" finished-at="2025-03-10T17:19:03 IST" duration-ms="10206">
+  <suite started-at="2025-03-10T21:18:31 IST" name="Default suite" finished-at="2025-03-10T21:18:48 IST" duration-ms="17394">
     <groups>
     </groups>
-    <test started-at="2025-03-10T17:18:52 IST" name="Default test" finished-at="2025-03-10T17:19:03 IST" duration-ms="10206">
-      <class name="com.joom.automation.package1.ShoppingCart">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.package1.ShoppingCart@6f45df59]" started-at="2025-03-10T17:18:52 IST" name="configBS" finished-at="2025-03-10T17:18:52 IST" duration-ms="14" status="PASS">
+    <test started-at="2025-03-10T21:18:31 IST" name="Default test" finished-at="2025-03-10T21:18:48 IST" duration-ms="17394">
+      <class name="com.joom.automation.package1.CreateCategory">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.package1.CreateCategory@6f45df59]" started-at="2025-03-10T21:18:31 IST" name="configBS" finished-at="2025-03-10T21:18:31 IST" duration-ms="21" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Connecting to Database and Configuring Reports ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.joom.automation.package1.ShoppingCart@6f45df59]" started-at="2025-03-10T17:18:52 IST" name="configBC" finished-at="2025-03-10T17:18:59 IST" duration-ms="7097" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.joom.automation.package1.CreateCategory@6f45df59]" started-at="2025-03-10T21:18:31 IST" name="configBC" finished-at="2025-03-10T21:18:41 IST" duration-ms="10034" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Launching Browser ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.package1.ShoppingCart@6f45df59]" started-at="2025-03-10T17:18:59 IST" name="configBM" finished-at="2025-03-10T17:19:02 IST" duration-ms="2658" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.package1.CreateCategory@6f45df59]" started-at="2025-03-10T21:18:41 IST" name="configBM" finished-at="2025-03-10T21:18:43 IST" duration-ms="2421" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Logging into Application ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="addProductToCart()[pri:0, instance:com.joom.automation.package1.ShoppingCart@6f45df59]" started-at="2025-03-10T17:19:02 IST" name="addProductToCart" finished-at="2025-03-10T17:19:02 IST" duration-ms="16" status="PASS">
+        <test-method signature="createCategory()[pri:0, instance:com.joom.automation.package1.CreateCategory@6f45df59]" started-at="2025-03-10T21:18:43 IST" name="createCategory" finished-at="2025-03-10T21:18:47 IST" duration-ms="3987" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductToCart -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.package1.ShoppingCart@6f45df59]" started-at="2025-03-10T17:19:02 IST" name="configAM" finished-at="2025-03-10T17:19:02 IST" duration-ms="216" status="PASS">
+        </test-method> <!-- createCategory -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.package1.CreateCategory@6f45df59]" started-at="2025-03-10T21:18:47 IST" name="configAM" finished-at="2025-03-10T21:18:48 IST" duration-ms="540" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Logging out of Application ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.package1.ShoppingCart@6f45df59]" started-at="2025-03-10T17:19:02 IST" name="configAC" finished-at="2025-03-10T17:19:03 IST" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.package1.CreateCategory@6f45df59]" started-at="2025-03-10T21:18:48 IST" name="configAC" finished-at="2025-03-10T21:18:48 IST" duration-ms="321" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.package1.ShoppingCart@6f45df59]" started-at="2025-03-10T17:19:03 IST" name="configAS" finished-at="2025-03-10T17:19:03 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.package1.CreateCategory@6f45df59]" started-at="2025-03-10T21:18:48 IST" name="configAS" finished-at="2025-03-10T21:18:48 IST" duration-ms="2" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Closing DB Connection and Generating Reports ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.joom.automation.package1.ShoppingCart -->
+      </class> <!-- com.joom.automation.package1.CreateCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
