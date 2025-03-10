@@ -13,6 +13,7 @@ public class ShoppingCart {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
+		driver.get("");
 		
 	}
 	
