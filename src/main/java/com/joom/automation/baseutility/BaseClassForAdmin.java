@@ -40,12 +40,14 @@ public class BaseClassForAdmin {
 		Reporter.log("=== Connecting to Database and Configuring Reports ===", true);
 	}
 
+
 	@BeforeClass
 	public void configBC() throws Throwable {
 		Reporter.log("=== Launching Browser ===", true);
 		jad = new JsonForAdminUtility();
 		String browser = jad.readDataFromJson("browser");
 		String URL = jad.readDataFromJson("url");
+
 
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
