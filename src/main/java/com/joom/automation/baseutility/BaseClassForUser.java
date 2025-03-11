@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import com.joom.automation.WebDriverUtility.WebdriverUtility;
 import com.joom.automation.generic.fileutility.JsonForUserUtility;
 import com.joom.automation.objectrepository.HomePage;
 import com.joom.automation.objectrepository.UserLoginPage;
@@ -24,6 +25,7 @@ import com.joom.automation.objectrepository.UserLoginPage;
 public class BaseClassForUser {
 	public WebDriver driver=null;
 	public JsonForUserUtility js;
+	public WebdriverUtility wb;
 	
 	@BeforeSuite
 	public void configBS() {

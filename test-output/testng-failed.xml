@@ -3,7 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-
+      <class name="com.joom.automation.package1.ShoppingCartt">
+        <methods>
+          <include name="congfigBC"/>
+          <include name="configBS"/>
+          <include name="addProductToCart"/>
+          <include name="configAC"/>
+          <include name="configAS"/>
+          <include name="configBM"/>
+          <include name="configAM"/>
+        </methods>
+      </class> <!-- com.joom.automation.package1.ShoppingCartt -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
