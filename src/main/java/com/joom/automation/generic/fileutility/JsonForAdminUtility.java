@@ -11,7 +11,7 @@ import com.google.protobuf.TextFormat.ParseException;
 public class JsonForAdminUtility {
 	public String readDataFromJson(String key) throws Throwable, IOException, ParseException {
 		JSONParser parse = new JSONParser();
-		Object obj = parse.parse(new FileReader("./configData/commondataForAdmin.json"));
+		Object obj = parse.parse(new FileReader("D:\\HP1\\Desktop\\Workspace\\Workspace\\com.joom.automation\\src\\test\\resources\\configData\\commondataForAdmin.json"));
 		// convert java object in to json object using down casting
 		JSONObject map = (JSONObject) obj;
 		String data = (String) map.get(key);

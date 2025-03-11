@@ -5,73 +5,13 @@
       <![CDATA[=== Connecting to Database and Configuring Reports ===]]>
     </line>
     <line>
-      <![CDATA[=== Launching Browser]]>
-    </line>
-    <line>
-      <![CDATA[===enter URL]]>
-    </line>
-    <line>
-      <![CDATA[===logout===]]>
-    </line>
-    <line>
-      <![CDATA[===Close the Browser===]]>
-    </line>
-    <line>
-      <![CDATA[===close DB report backup]]>
-    </line>
-  </reporter-output>
-  <suite started-at="2025-03-10T18:22:51 IST" name="Default suite" finished-at="2025-03-10T18:22:54 IST" duration-ms="3717">
-    <groups>
-    </groups>
-    <test started-at="2025-03-10T18:22:51 IST" name="Default test" finished-at="2025-03-10T18:22:54 IST" duration-ms="3717">
-      <class name="com.joom.automation.package1.ShoppingCartt">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.package1.ShoppingCartt@40005471]" started-at="2025-03-10T18:22:51 IST" name="configBS" finished-at="2025-03-10T18:22:51 IST" duration-ms="14" status="PASS">
+
           <reporter-output>
             <line>
               <![CDATA[=== Connecting to Database and Configuring Reports ===]]>
             </line>
           </reporter-output>
-        </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="congfigBC()[pri:0, instance:com.joom.automation.package1.ShoppingCartt@40005471]" started-at="2025-03-10T18:22:51 IST" name="congfigBC" finished-at="2025-03-10T18:22:53 IST" duration-ms="2748" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[=== Launching Browser]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- congfigBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.package1.ShoppingCartt@40005471]" started-at="2025-03-10T18:22:53 IST" name="configBM" finished-at="2025-03-10T18:22:54 IST" duration-ms="894" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[===enter URL]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configBM -->
-        <test-method signature="addProductToCart()[pri:0, instance:com.joom.automation.package1.ShoppingCartt@40005471]" started-at="2025-03-10T18:22:54 IST" name="addProductToCart" finished-at="2025-03-10T18:22:54 IST" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProductToCart -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.package1.ShoppingCartt@40005471]" started-at="2025-03-10T18:22:54 IST" name="configAM" finished-at="2025-03-10T18:22:54 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[===logout===]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.package1.ShoppingCartt@40005471]" started-at="2025-03-10T18:22:54 IST" name="configAC" finished-at="2025-03-10T18:22:54 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[===Close the Browser===]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.package1.ShoppingCartt@40005471]" started-at="2025-03-10T18:22:54 IST" name="configAS" finished-at="2025-03-10T18:22:54 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[===close DB report backup]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAS -->
-      </class> <!-- com.joom.automation.package1.ShoppingCartt -->
+
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
