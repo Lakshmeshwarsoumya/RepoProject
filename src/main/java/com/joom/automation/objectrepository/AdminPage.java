@@ -17,6 +17,9 @@ public class AdminPage {
 	@FindBy(xpath = "//a[text()=' Create Category ']")
 	private WebElement createCategoryLink;
 
+	@FindBy(xpath = "//a[text()='Sub Category ']")
+	private WebElement subCategoryLink;
+
 	@FindBy(xpath = "//img[@class='nav-avatar']")
 	private WebElement logoutIcon;
 
@@ -38,6 +41,10 @@ public class AdminPage {
 
 	public WebElement getCreateCategoryLink() {
 		return createCategoryLink;
+	}
+
+	public WebElement getSubCategoryLink() {
+		return subCategoryLink;
 	}
 
 	public WebElement getLogoutIcon() {

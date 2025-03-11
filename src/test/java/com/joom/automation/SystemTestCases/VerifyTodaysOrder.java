@@ -1,4 +1,4 @@
-package com.joom.automation.package1;
+package com.joom.automation.SystemTestCases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

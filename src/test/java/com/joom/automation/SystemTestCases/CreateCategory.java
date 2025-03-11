@@ -1,4 +1,4 @@
-package com.joom.automation.package1;
+package com.joom.automation.SystemTestCases;
 
 import java.io.IOException;
 import java.time.Duration;
