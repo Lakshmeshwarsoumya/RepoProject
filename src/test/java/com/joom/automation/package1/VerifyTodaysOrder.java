@@ -14,6 +14,8 @@ public class VerifyTodaysOrder extends BaseClassForAdmin {
 	public void todaysOrders() {
 		adp = new AdminPage(driver);
 		adp.todaysOrders();
+		
+		adp.getOrderMgmtLink().click();
 
 		WebElement norDisplayed = driver.findElement(By.xpath("(//b[@class='label orange pull-right'])[1]"));
 		WebElement entries = driver.findElement(By.xpath("//div[@class='dataTables_info']"));
