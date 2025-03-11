@@ -1,4 +1,4 @@
-package com.joom.automation.package1;
+package com.joom.automation.SystemTestCases;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -9,10 +9,12 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.google.protobuf.TextFormat.ParseException;
+import com.joom.automation.WebDriverUtility.WebdriverUtility;
 import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
@@ -46,13 +48,13 @@ public class CreateCategory extends BaseClassForAdmin {
 		searchTextField.sendKeys(category);
 
 		// Wait for the category to be displayed in the table
-		WebElement createdCategory = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'" + category + "')]")));
-
+		WebElement createCategory = driver.findElement(By.xpath("//td[contains(text(),'" + category + "')]"));
+		wlib = new WebdriverUtility();
+		wlib.waitForElementPresent(driver, createCategory);
 		// Soft Assertion to verify category creation
 		SoftAssert sa = new SoftAssert();
-		sa.assertTrue(confirmationMsg.isDisplayed(), "Confirmation message not displayed!");
-		sa.assertTrue(createdCategory.isDisplayed(), "Category not found in the list!");
+		sa.assertEquals(createCategory.equals(category), true);
+		Reporter.log("category created successfully", true);
 
 		// Assert all
 		sa.assertAll();

@@ -1,4 +1,4 @@
-package com.joom.automation.package1;
+package com.joom.automation.SystemTestCases;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -71,6 +71,7 @@ public class ShoppingCartt extends BaseClassForUser {
 		wb.scrollToElement(driver, ele1);
 		ele1.click();
 		
+		Thread.sleep(2000);
 		UserPaymentMethodPage upm=new UserPaymentMethodPage(driver);
 		upm.getCODradiobtn().click();
 		upm.getSubmitBtn().click();
