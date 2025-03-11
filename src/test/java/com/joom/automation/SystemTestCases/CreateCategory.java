@@ -26,7 +26,7 @@ public class CreateCategory extends BaseClassForAdmin {
 	public void createCategory() throws ParseException, IOException, Throwable {
 		adp = new AdminPage(driver);
 		CreateCategoryPage ccp = new CreateCategoryPage(driver);
-		ExcelUtilityForAdmin ela = new ExcelUtilityForAdmin();
+		ela = new ExcelUtilityForAdmin();
 
 		// Fetch category name & description from Excel
 		String category = ela.getDataFromExcel("Sheet1", 1, 0);

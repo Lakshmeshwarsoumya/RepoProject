@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeSuite;
 
 import com.google.protobuf.TextFormat.ParseException;
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
+import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.generic.fileutility.JsonForAdminUtility;
 import com.joom.automation.objectrepository.AdminLoginPage;
 import com.joom.automation.objectrepository.AdminPage;
@@ -36,6 +37,7 @@ public class BaseClassForAdmin {
 	public HomePage hp;
 	public AdminPage adp;
 	public WebdriverUtility wlib;
+	public ExcelUtilityForAdmin ela ;
 
 	@BeforeSuite
 	public void configBS() {

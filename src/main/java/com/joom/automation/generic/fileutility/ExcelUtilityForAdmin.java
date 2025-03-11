@@ -13,7 +13,7 @@ public class ExcelUtilityForAdmin {
 		FileInputStream fis = new FileInputStream(
 				"D:\\HP1\\Desktop\\Workspace\\Workspace\\com.joom.automation\\src\\test\\resources\\TestScriptData\\CategoryFields.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
-		String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
+		String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).toString();
 		wb.close();
 
 		return data;

@@ -20,6 +20,9 @@ public class AdminPage {
 	@FindBy(xpath = "//a[text()='Sub Category ']")
 	private WebElement subCategoryLink;
 
+	@FindBy(xpath = "//a[text()='Insert Product ']")
+	private WebElement inserProductLink;
+
 	@FindBy(xpath = "//img[@class='nav-avatar']")
 	private WebElement logoutIcon;
 
@@ -45,6 +48,10 @@ public class AdminPage {
 
 	public WebElement getSubCategoryLink() {
 		return subCategoryLink;
+	}
+
+	public WebElement getInserProductLink() {
+		return inserProductLink;
 	}
 
 	public WebElement getLogoutIcon() {
