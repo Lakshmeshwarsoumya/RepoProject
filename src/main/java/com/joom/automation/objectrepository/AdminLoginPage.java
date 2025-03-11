@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AdminLoginPage {
+	WebDriver driver;
 	@FindBy(id = "inputEmail")
 	private WebElement adminTextField;
 
@@ -20,7 +21,9 @@ public class AdminLoginPage {
 	private WebElement loginButton;
 
 	public AdminLoginPage(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		this.driver=driver;
+
+		PageFactory.initElements(driver,this);
 
 	}
 

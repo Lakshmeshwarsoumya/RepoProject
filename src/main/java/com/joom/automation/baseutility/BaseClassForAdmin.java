@@ -1,16 +1,25 @@
 package com.joom.automation.baseutility;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.google.protobuf.TextFormat.ParseException;
 import com.joom.automation.generic.fileutility.JsonForAdminUtility;
+import com.joom.automation.objectrepository.AdminLoginPage;
+import com.joom.automation.objectrepository.AdminPage;
+import com.joom.automation.objectrepository.HomePage;
 
 /**
  * CrossBrowserBaseClass manages test setup and teardown across multiple
@@ -20,16 +29,25 @@ import com.joom.automation.generic.fileutility.JsonForAdminUtility;
  */
 
 public class BaseClassForAdmin {
-	WebDriver driver;
+	public WebDriver driver = null;
+	public JsonForAdminUtility jad;
+	public AdminLoginPage adlp;
+	public HomePage hp;
+	public AdminPage adp;
+
 	@BeforeSuite
 	public void configBS() {
 		Reporter.log("=== Connecting to Database and Configuring Reports ===", true);
 	}
-	@BeforeSuite
-	public void congfigBC() throws ParseException, IOException, Throwable {
-		Reporter.log("=== Launching Browser", true);
-		JsonForAdminUtility jad=new JsonForAdminUtility();
-		String browser=jad.readDataFromJson("browser");
+
+
+	@BeforeClass
+	public void configBC() throws Throwable {
+		Reporter.log("=== Launching Browser ===", true);
+		jad = new JsonForAdminUtility();
+		String browser = jad.readDataFromJson("browser");
+		String URL = jad.readDataFromJson("url");
+
 
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
@@ -41,8 +59,50 @@ public class BaseClassForAdmin {
 			Reporter.log("Invalid browser specified. Defaulting to Chrome.", true);
 			driver = new ChromeDriver();
 		}
-		
+
+		driver.manage().window().maximize();
+		driver.get(URL); // ✅ Load URL here
+
 	}
-	
+
+	@BeforeMethod
+	public void configBM() throws ParseException, IOException, Throwable {
+		Reporter.log("=== Logging into Application ===", true);
+
+		jad = new JsonForAdminUtility();
+
+		String USERNAME = jad.readDataFromJson("username");
+		String PASSWORD = jad.readDataFromJson("password");
+
+		hp = new HomePage(driver);
+		hp.getAdminLoginLink().click();
+
+		adlp = new AdminLoginPage(driver);
+		adlp.adminLogin(USERNAME, PASSWORD);
+
+	}
+
+	/**
+	 * Logs out of the application after each test method.
+	 */
+	@AfterMethod
+	public void configAM() {
+		Reporter.log("=== Logging out of Application ===", true);
+		adp = new AdminPage(driver);
+		adp.logout();
+
+	}
+
+	@AfterClass
+	public void configAC() {
+		driver.quit();
+
+	}
+
+	@AfterSuite
+	public void configAS() throws SQLException {
+		Reporter.log("=== Closing DB Connection and Generating Reports ===", true);
+
+	}
 
 }
