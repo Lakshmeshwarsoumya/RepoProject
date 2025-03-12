@@ -20,9 +20,14 @@ public class WebdriverUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	public void select(WebElement element, String text) {
 		Select sel = new Select(element);
 		sel.selectByVisibleText(text);
+	}
+
+	public void switchToAlertAndAccept(WebDriver driver) {
+		driver.switchTo().alert().accept();
+
 	}
 }
