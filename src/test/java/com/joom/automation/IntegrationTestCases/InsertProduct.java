@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
@@ -47,22 +48,27 @@ public class InsertProduct extends BaseClassForAdmin {
 
 		ipp.getDescriptionTextField().sendKeys(productDiscription);
 		String productShippingCharge = ela.getDataFromExcel("Sheet1", 1, 7);
+		WebElement insertButton = driver.findElement(By.xpath("//button[text()='Insert']"));
+		
+		Actions act=new Actions(driver);
+		act.scrollToElement(insertButton);
 
 		ipp.getProductShippingChargeTextField().sendKeys(productShippingCharge);
 		String productAvailbility = ela.getDataFromExcel("Sheet1", 1, 8);
 		wlib.select(ipp.getProductAvailabilityTF(), productAvailbility);
 		
-		WebElement fileInput1 = driver.findElement(By.xpath("//input[@type='file'][1]"));
+		
+		WebElement fileInput1 = driver.findElement(By.xpath("//input[@name='productimage1']"));
         fileInput1.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
 
-        WebElement fileInput2 = driver.findElement(By.xpath("//input[@type='file'][2]"));
+        WebElement fileInput2 = driver.findElement(By.xpath("//input[@name='productimage2']"));
         fileInput2.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
 
-        WebElement fileInput3 = driver.findElement(By.xpath("//input[@type='file'][3]"));
+        WebElement fileInput3 = driver.findElement(By.xpath("//input[@name='productimage3']"));
         fileInput3.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
 
         // Click the Insert button
-        WebElement insertButton = driver.findElement(By.xpath("//button[text()='Insert']"));
+       
         insertButton.click();
 
 	}

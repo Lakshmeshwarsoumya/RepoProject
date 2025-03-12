@@ -34,13 +34,13 @@ public class InsertProductPage {
 	@FindBy(xpath = "//select[@name='productAvailability']")
 	private WebElement productAvailabilityTF;
 
-	@FindBy(name = "productimage1")
+	@FindBy(xpath = "//input[@name='productimage1']")
 	private WebElement image1;
 
-	@FindBy(name = "productimage2")
+	@FindBy(xpath="//input[@name='productimage2']")
 	private WebElement image2;
 
-	@FindBy(name = "productimage3")
+	@FindBy(xpath="//input[@name='productimage3']")
 	private WebElement image3;
 
 	@FindBy(xpath = "//button[text()='Insert']")
