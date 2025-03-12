@@ -58,13 +58,13 @@ public class InsertProduct extends BaseClassForAdmin {
 		wlib.select(ipp.getProductAvailabilityTF(), productAvailbility);
 		
 		
-		WebElement fileInput1 = driver.findElement(By.xpath("//input[@name='productimage1']"));
-        fileInput1.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
+		WebElement fileInput1 = ipp.getImage1();
+		fileInput1.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
 
-        WebElement fileInput2 = driver.findElement(By.xpath("//input[@name='productimage2']"));
+        WebElement fileInput2 = ipp.getImage2();
         fileInput2.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
 
-        WebElement fileInput3 = driver.findElement(By.xpath("//input[@name='productimage3']"));
+        WebElement fileInput3 = ipp.getImage3();
         fileInput3.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
 
         // Click the Insert butto/.n

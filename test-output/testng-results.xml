@@ -17,48 +17,48 @@
       <![CDATA[=== Closing DB Connection and Generating Reports ===]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-12T10:18:20 IST" name="Default suite" finished-at="2025-03-12T10:20:38 IST" duration-ms="138408">
+  <suite started-at="2025-03-12T12:33:41 IST" name="Default suite" finished-at="2025-03-12T12:37:20 IST" duration-ms="218833">
     <groups>
     </groups>
-    <test started-at="2025-03-12T10:18:20 IST" name="Default test" finished-at="2025-03-12T10:20:38 IST" duration-ms="138408">
+    <test started-at="2025-03-12T12:33:41 IST" name="Default test" finished-at="2025-03-12T12:37:20 IST" duration-ms="218833">
       <class name="com.joom.automation.IntegrationTestCases.InsertProduct">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T10:18:20 IST" name="configBS" finished-at="2025-03-12T10:18:20 IST" duration-ms="22" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T12:33:41 IST" name="configBS" finished-at="2025-03-12T12:33:41 IST" duration-ms="135" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Connecting to Database and Configuring Reports ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T10:18:20 IST" name="configBC" finished-at="2025-03-12T10:20:03 IST" duration-ms="103781" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T12:33:41 IST" name="configBC" finished-at="2025-03-12T12:35:45 IST" duration-ms="124364" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Launching Browser ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T10:20:04 IST" name="configBM" finished-at="2025-03-12T10:20:08 IST" duration-ms="4287" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T12:35:45 IST" name="configBM" finished-at="2025-03-12T12:36:57 IST" duration-ms="71956" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Logging into Application ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="insertProduct()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T10:20:08 IST" name="insertProduct" finished-at="2025-03-12T10:20:37 IST" duration-ms="29000" status="PASS">
+        <test-method signature="insertProduct()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T12:36:57 IST" name="insertProduct" finished-at="2025-03-12T12:37:18 IST" duration-ms="20539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- insertProduct -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T10:20:37 IST" name="configAM" finished-at="2025-03-12T10:20:38 IST" duration-ms="686" status="PASS">
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T12:37:18 IST" name="configAM" finished-at="2025-03-12T12:37:19 IST" duration-ms="1148" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Logging out of Application ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T10:20:38 IST" name="configAC" finished-at="2025-03-12T10:20:38 IST" duration-ms="465" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T12:37:19 IST" name="configAC" finished-at="2025-03-12T12:37:20 IST" duration-ms="579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T10:20:38 IST" name="configAS" finished-at="2025-03-12T10:20:38 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.IntegrationTestCases.InsertProduct@291b4bf5]" started-at="2025-03-12T12:37:20 IST" name="configAS" finished-at="2025-03-12T12:37:20 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Closing DB Connection and Generating Reports ===]]>
