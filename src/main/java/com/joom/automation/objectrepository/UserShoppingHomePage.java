@@ -25,9 +25,17 @@ public class UserShoppingHomePage {
 	@FindBy(xpath="//input[@class='search-field']")
 	private WebElement seachtxtfld;
 	
+	@FindBy(xpath="//a[text()='Login']")
+	private WebElement loginlink;
+	
+	
 	
 
 	
+	public WebElement getLoginlink() {
+		return loginlink;
+	}
+
 	public WebElement getSeachtxtfld() {
 		return seachtxtfld;
 	}

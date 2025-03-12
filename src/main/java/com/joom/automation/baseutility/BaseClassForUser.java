@@ -21,14 +21,30 @@ import com.joom.automation.WebDriverUtility.WebdriverUtility;
 import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.generic.fileutility.JsonForUserUtility;
 import com.joom.automation.objectrepository.HomePage;
+import com.joom.automation.objectrepository.UserBooksCategoryPage;
+import com.joom.automation.objectrepository.UserFashionCategoryPage;
+import com.joom.automation.objectrepository.UserHomePage;
 import com.joom.automation.objectrepository.UserLoginPage;
+import com.joom.automation.objectrepository.UserMyCartPage;
+import com.joom.automation.objectrepository.UserPaymentMethodPage;
+import com.joom.automation.objectrepository.UserProductDetailsPage;
+import com.joom.automation.objectrepository.UserShoppingHomePage;
+import com.joom.automation.objectrepository.UserSignUpPage;
 
 
 public class BaseClassForUser {
 	public WebDriver driver=null;
 	public JsonForUserUtility js;
 	public WebdriverUtility wb;
-	public ExcelUtilityForAdmin elib= new ExcelUtilityForAdmin();
+	public ExcelUtilityForAdmin elib;
+	public UserShoppingHomePage ushp;
+	 public UserFashionCategoryPage ufcp;
+	public UserHomePage uhp;
+	public UserSignUpPage usp;
+	public UserBooksCategoryPage ubcp;
+	 public UserProductDetailsPage updp;
+	 public UserMyCartPage umcp;
+	 public UserPaymentMethodPage upmp;
 	
 	
 	@BeforeSuite

@@ -23,18 +23,18 @@ public void userWishlistTest() throws InterruptedException {
 	driver.manage().window().maximize();
 	
 	//click on books link
-	UserShoppingHomePage ushp = new UserShoppingHomePage(driver);
+	 ushp = new UserShoppingHomePage(driver);
 	ushp.getBooksbtn().click();
 	
 	// scroll down and click on theastilton book
-	UserBooksCategoryPage ubcp= new UserBooksCategoryPage(driver);
+	 ubcp= new UserBooksCategoryPage(driver);
 	WebElement book = ubcp.getDemobooklink();
 	wb.scrollToElements(driver, book);
 	ubcp.getDemobooklink().click();
 	Thread.sleep(2000);
 	
 	//to click on wishlist button
-	UserProductDetailsPage updp= new UserProductDetailsPage(driver);
+	 updp= new UserProductDetailsPage(driver);
 	updp.getWishlistBtn().click();
 	
 	Thread.sleep(2000);

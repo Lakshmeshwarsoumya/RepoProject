@@ -27,11 +27,11 @@ public class UpdatingShoppingCart extends  BaseClassForUser{
 		driver.manage().window().maximize();
 		
 		//click on fashion
-		UserShoppingHomePage ushp= new UserShoppingHomePage(driver);
+		 ushp= new UserShoppingHomePage(driver);
 		ushp.getFashionbtn().click();
 		
 		//click on saree product
-		UserFashionCategoryPage ufcp=new UserFashionCategoryPage(driver);
+		ufcp=new UserFashionCategoryPage(driver);
 		Thread.sleep(2000);
 		//it is not scrolling
 		WebElement shoe= ufcp.getShoebtn();
@@ -59,7 +59,7 @@ public class UpdatingShoppingCart extends  BaseClassForUser{
 		
 	
 		//click on updateshopping cart button
-		UserMyCartPage umcp=new UserMyCartPage(driver);
+	     umcp=new UserMyCartPage(driver);
 		Thread.sleep(2000);
 		WebElement update = umcp.getUpdateShoppingCartBtn();
 		wb= new WebdriverUtility();

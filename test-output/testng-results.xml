@@ -8,56 +8,98 @@
       <![CDATA[=== Launching Browser]]>
     </line>
     <line>
+      <![CDATA[===enter URL]]>
+    </line>
+    <line>
+      <![CDATA[===logout===]]>
+    </line>
+    <line>
       <![CDATA[===Close the Browser===]]>
     </line>
     <line>
       <![CDATA[===close DB report backup]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-12T00:13:16 IST" name="Default suite" finished-at="2025-03-12T00:13:20 IST" duration-ms="3890">
+  <suite started-at="2025-03-12T11:56:31 IST" name="Default suite" finished-at="2025-03-12T11:57:36 IST" duration-ms="65612">
     <groups>
     </groups>
-    <test started-at="2025-03-12T00:13:16 IST" name="Default test" finished-at="2025-03-12T00:13:20 IST" duration-ms="3890">
-      <class name="com.joom.automation.IntegrationTestCases.UserProductSearchTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.IntegrationTestCases.UserProductSearchTest@609cd4d8]" started-at="2025-03-12T00:13:16 IST" name="configBS" finished-at="2025-03-12T00:13:16 IST" duration-ms="17" status="PASS">
+    <test started-at="2025-03-12T11:56:31 IST" name="Default test" finished-at="2025-03-12T11:57:36 IST" duration-ms="65612">
+      <class name="com.joom.automation.SmoketestCases.UserNewContactTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.SmoketestCases.UserNewContactTest@4961f6af]" started-at="2025-03-12T11:56:31 IST" name="configBS" finished-at="2025-03-12T11:56:31 IST" duration-ms="18" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Connecting to Database and Configuring Reports ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="congfigBC()[pri:0, instance:com.joom.automation.IntegrationTestCases.UserProductSearchTest@609cd4d8]" started-at="2025-03-12T00:13:16 IST" name="congfigBC" finished-at="2025-03-12T00:13:20 IST" duration-ms="3802" status="PASS">
+        <test-method is-config="true" signature="congfigBC()[pri:0, instance:com.joom.automation.SmoketestCases.UserNewContactTest@4961f6af]" started-at="2025-03-12T11:56:31 IST" name="congfigBC" finished-at="2025-03-12T11:56:36 IST" duration-ms="4922" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Launching Browser]]>
             </line>
           </reporter-output>
         </test-method> <!-- congfigBC -->
-        <test-method signature="UserProductSearchTest(org.openqa.selenium.WebDriver)[pri:0, instance:com.joom.automation.IntegrationTestCases.UserProductSearchTest@609cd4d8]" started-at="2025-03-12T00:13:20 IST" name="UserProductSearchTest" finished-at="2025-03-12T00:13:20 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.SmoketestCases.UserNewContactTest@4961f6af]" started-at="2025-03-12T11:56:36 IST" name="configBM" finished-at="2025-03-12T11:56:46 IST" duration-ms="10252" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[===enter URL]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="userNewContactTest()[pri:0, instance:com.joom.automation.SmoketestCases.UserNewContactTest@4961f6af]" started-at="2025-03-12T11:56:46 IST" name="userNewContactTest" finished-at="2025-03-12T11:57:36 IST" duration-ms="50340" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[
-Cannot inject @Test annotated Method [UserProductSearchTest] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=134.0.6998.88)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad42e661e08a52578de5eaad5b90917d, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.88, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\priya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58153}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58153/devtoo..., se:cdpVersion: 134.0.6998.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad42e661e08a52578de5eaad5b90917d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Cannot inject @Test annotated Method [UserProductSearchTest] with [interface org.openqa.selenium.WebDriver].
-For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-at org.testng.internal.Parameters.createParameters(Parameters.java:699)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Login']"}
+  (Session info: chrome=134.0.6998.88)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad42e661e08a52578de5eaad5b90917d, findElement {using=xpath, value=//a[text()='Login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.88, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\priya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58153}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58153/devtoo..., se:cdpVersion: 134.0.6998.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ad42e661e08a52578de5eaad5b90917d
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+at com.joom.automation.SmoketestCases.UserNewContactTest.userNewContactTest(UserNewContactTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -73,25 +115,32 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserProductSearchTest -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.IntegrationTestCases.UserProductSearchTest@609cd4d8]" started-at="2025-03-12T00:13:20 IST" name="configAC" finished-at="2025-03-12T00:13:20 IST" duration-ms="4" status="PASS">
+        </test-method> <!-- userNewContactTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.SmoketestCases.UserNewContactTest@4961f6af]" started-at="2025-03-12T11:57:36 IST" name="configAM" finished-at="2025-03-12T11:57:36 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[===logout===]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.SmoketestCases.UserNewContactTest@4961f6af]" started-at="2025-03-12T11:57:36 IST" name="configAC" finished-at="2025-03-12T11:57:36 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[===Close the Browser===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.IntegrationTestCases.UserProductSearchTest@609cd4d8]" started-at="2025-03-12T00:13:20 IST" name="configAS" finished-at="2025-03-12T00:13:20 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.SmoketestCases.UserNewContactTest@4961f6af]" started-at="2025-03-12T11:57:36 IST" name="configAS" finished-at="2025-03-12T11:57:36 IST" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[===close DB report backup]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.joom.automation.IntegrationTestCases.UserProductSearchTest -->
+      </class> <!-- com.joom.automation.SmoketestCases.UserNewContactTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

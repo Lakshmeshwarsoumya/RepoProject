@@ -28,11 +28,11 @@ public class ShoppingCarttTest extends BaseClassForUser {
 		driver.manage().window().maximize();
 		
 		//click on books button
-		UserShoppingHomePage ushp = new UserShoppingHomePage(driver);
+	 ushp = new UserShoppingHomePage(driver);
 		ushp.getBooksbtn().click();
 		
 		//click on demo book
-		UserBooksCategoryPage ubcp= new UserBooksCategoryPage(driver);
+		 ubcp= new UserBooksCategoryPage(driver);
 		WebElement demobook = ubcp.getDemobooklink();
 		
 		wb= new WebdriverUtility();
@@ -41,7 +41,7 @@ public class ShoppingCarttTest extends BaseClassForUser {
 		Thread.sleep(2000);
 		
 		//click on add to cart
-		UserProductDetailsPage updp= new UserProductDetailsPage(driver);
+		updp= new UserProductDetailsPage(driver);
         WebElement addCart = updp.getAddtocartbtn();
         wb= new WebdriverUtility();
   		wb.scrollToElements(driver,addCart);
@@ -59,7 +59,7 @@ public class ShoppingCarttTest extends BaseClassForUser {
   		}
   		
   		//scroll to proceed to checkout
-  		UserMyCartPage umcp= new UserMyCartPage(driver);
+  		 umcp= new UserMyCartPage(driver);
   		WebElement checkout = umcp.getProceedToCheckoutBtn();
   		
   		wb= new WebdriverUtility();
@@ -67,11 +67,11 @@ public class ShoppingCarttTest extends BaseClassForUser {
   		umcp.getProceedToCheckoutBtn().click();
   		
   		//select mode of payment and clock on  submit button
-  		UserPaymentMethodPage upmp=new UserPaymentMethodPage(driver);
+  		upmp=new UserPaymentMethodPage(driver);
   		upmp.getCODradiobtn().click();
   		upmp.getSubmitBtn().click();
-  		
-		
+	}	
+}	
 
 		
 		
@@ -79,6 +79,6 @@ public class ShoppingCarttTest extends BaseClassForUser {
 		
 		
 		 
-	}
+	
 
-}
+
