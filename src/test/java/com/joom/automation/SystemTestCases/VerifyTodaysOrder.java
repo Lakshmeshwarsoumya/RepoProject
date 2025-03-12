@@ -20,7 +20,7 @@ public class VerifyTodaysOrder extends BaseClassForAdmin {
 		WebElement norDisplayed = driver.findElement(By.xpath("(//b[@class='label orange pull-right'])[1]"));
 		WebElement entries = driver.findElement(By.xpath("//div[@class='dataTables_info']"));
 		wlib = new WebdriverUtility();
-		wlib.waitForElementPresent(driver, norDisplayed);
+		wlib.waitForElementPresent(driver, norDisplayed, 20);
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(norDisplayed, true);
 		sa.assertEquals(entries, true);

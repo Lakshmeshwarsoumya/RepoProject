@@ -11,61 +11,67 @@
       <![CDATA[=== Logging into Application ===]]>
     </line>
     <line>
+      <![CDATA[created sub category]]>
+    </line>
+    <line>
       <![CDATA[=== Logging out of Application ===]]>
     </line>
     <line>
       <![CDATA[=== Closing DB Connection and Generating Reports ===]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-12T15:08:36 IST" name="Default suite" finished-at="2025-03-12T15:08:48 IST" duration-ms="12040">
+  <suite started-at="2025-03-12T16:16:34 IST" name="Default suite" finished-at="2025-03-12T16:16:56 IST" duration-ms="21426">
     <groups>
     </groups>
-    <test started-at="2025-03-12T15:08:36 IST" name="Default test" finished-at="2025-03-12T15:08:48 IST" duration-ms="12040">
-      <class name="com.joom.automation.IntegrationTestCases.ManageProducts">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.IntegrationTestCases.ManageProducts@291b4bf5]" started-at="2025-03-12T15:08:36 IST" name="configBS" finished-at="2025-03-12T15:08:36 IST" duration-ms="26" status="PASS">
+    <test started-at="2025-03-12T16:16:34 IST" name="Default test" finished-at="2025-03-12T16:16:56 IST" duration-ms="21426">
+      <class name="com.joom.automation.IntegrationTestCases.CreateSubCategory">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.joom.automation.IntegrationTestCases.CreateSubCategory@291b4bf5]" started-at="2025-03-12T16:16:34 IST" name="configBS" finished-at="2025-03-12T16:16:34 IST" duration-ms="20" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Connecting to Database and Configuring Reports ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.joom.automation.IntegrationTestCases.ManageProducts@291b4bf5]" started-at="2025-03-12T15:08:36 IST" name="configBC" finished-at="2025-03-12T15:08:44 IST" duration-ms="8517" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.joom.automation.IntegrationTestCases.CreateSubCategory@291b4bf5]" started-at="2025-03-12T16:16:34 IST" name="configBC" finished-at="2025-03-12T16:16:48 IST" duration-ms="13359" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Launching Browser ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.IntegrationTestCases.ManageProducts@291b4bf5]" started-at="2025-03-12T15:08:44 IST" name="configBM" finished-at="2025-03-12T15:08:46 IST" duration-ms="1483" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.joom.automation.IntegrationTestCases.CreateSubCategory@291b4bf5]" started-at="2025-03-12T16:16:48 IST" name="configBM" finished-at="2025-03-12T16:16:50 IST" duration-ms="1858" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Logging into Application ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="deleteProducts()[pri:0, instance:com.joom.automation.IntegrationTestCases.ManageProducts@291b4bf5]" started-at="2025-03-12T15:08:46 IST" name="deleteProducts" finished-at="2025-03-12T15:08:47 IST" duration-ms="992" status="PASS">
+        <test-method signature="insertSubcategory()[pri:0, instance:com.joom.automation.IntegrationTestCases.CreateSubCategory@291b4bf5]" started-at="2025-03-12T16:16:50 IST" name="insertSubcategory" finished-at="2025-03-12T16:16:55 IST" duration-ms="5384" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[created sub category]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- deleteProducts -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.IntegrationTestCases.ManageProducts@291b4bf5]" started-at="2025-03-12T15:08:47 IST" name="configAM" finished-at="2025-03-12T15:08:47 IST" duration-ms="650" status="PASS">
+        </test-method> <!-- insertSubcategory -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.joom.automation.IntegrationTestCases.CreateSubCategory@291b4bf5]" started-at="2025-03-12T16:16:55 IST" name="configAM" finished-at="2025-03-12T16:16:55 IST" duration-ms="370" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Logging out of Application ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.IntegrationTestCases.ManageProducts@291b4bf5]" started-at="2025-03-12T15:08:47 IST" name="configAC" finished-at="2025-03-12T15:08:48 IST" duration-ms="295" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.joom.automation.IntegrationTestCases.CreateSubCategory@291b4bf5]" started-at="2025-03-12T16:16:55 IST" name="configAC" finished-at="2025-03-12T16:16:56 IST" duration-ms="345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.IntegrationTestCases.ManageProducts@291b4bf5]" started-at="2025-03-12T15:08:48 IST" name="configAS" finished-at="2025-03-12T15:08:48 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.joom.automation.IntegrationTestCases.CreateSubCategory@291b4bf5]" started-at="2025-03-12T16:16:56 IST" name="configAS" finished-at="2025-03-12T16:16:56 IST" duration-ms="2" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=== Closing DB Connection and Generating Reports ===]]>
             </line>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.joom.automation.IntegrationTestCases.ManageProducts -->
+      </class> <!-- com.joom.automation.IntegrationTestCases.CreateSubCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -23,6 +23,7 @@ import com.joom.automation.objectrepository.AdminLoginPage;
 import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.HomePage;
 import com.joom.automation.objectrepository.ManageProductsPage;
+import com.joom.automation.objectrepository.SubCategoryPage;
 
 /**
  * CrossBrowserBaseClass manages test setup and teardown across multiple
@@ -40,6 +41,7 @@ public class BaseClassForAdmin {
 	public WebdriverUtility wlib;
 	public ExcelUtilityForAdmin ela ;
 	public ManageProductsPage mpp;
+	public SubCategoryPage scp;
 
 	@BeforeSuite
 	public void configBS() {

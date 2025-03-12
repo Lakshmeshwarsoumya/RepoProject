@@ -50,7 +50,7 @@ public class CreateCategory extends BaseClassForAdmin {
 		// Wait for the category to be displayed in the table
 		WebElement createCategory = driver.findElement(By.xpath("//td[contains(text(),'" + category + "')]"));
 		wlib = new WebdriverUtility();
-		wlib.waitForElementPresent(driver, createCategory);
+		wlib.waitForElementPresent(driver, createCategory, 20);
 		// Soft Assertion to verify category creation
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(createCategory.equals(category), true);

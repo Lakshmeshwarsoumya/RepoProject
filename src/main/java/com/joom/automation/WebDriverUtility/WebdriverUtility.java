@@ -16,10 +16,10 @@ public class WebdriverUtility {
 	}
 	// Wait until an element is visible
 
-	public void waitForElementPresent(WebDriver driver, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-		wait.until(ExpectedConditions.visibilityOf(element));
-	}
+	public void waitForElementPresent(WebDriver driver, WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
 
 	public void select(WebElement element, String text) {
 		Select sel = new Select(element);

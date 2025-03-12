@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.joom.automation.IntegrationTestCases.ManageProducts">
+      <class name="com.joom.automation.IntegrationTestCases.CreateSubCategory">
         <methods>
           <include name="configBM"/>
           <include name="configAM"/>
           <include name="configBC"/>
           <include name="configBS"/>
+          <include name="insertSubcategory"/>
           <include name="configAC"/>
           <include name="configAS"/>
-          <include name="deleteProducts"/>
         </methods>
-      </class> <!-- com.joom.automation.IntegrationTestCases.ManageProducts -->
+      </class> <!-- com.joom.automation.IntegrationTestCases.CreateSubCategory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
