@@ -67,7 +67,7 @@ public class InsertProduct extends BaseClassForAdmin {
         WebElement fileInput3 = driver.findElement(By.xpath("//input[@name='productimage3']"));
         fileInput3.sendKeys("D:\\HP1\\Desktop\\vivo-mobile-phone-1000x1000.webp");
 
-        // Click the Insert button
+        // Click the Insert butto/.n
        
         insertButton.click();
 
