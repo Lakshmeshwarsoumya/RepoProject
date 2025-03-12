@@ -21,8 +21,17 @@ public class UserShoppingHomePage {
 	
 	@FindBy(xpath = "//a[text()=' Fashion']")
 	private WebElement Fashionbtn;
+	
+	@FindBy(xpath="//input[@class='search-field']")
+	private WebElement seachtxtfld;
+	
+	
 
 	
+	public WebElement getSeachtxtfld() {
+		return seachtxtfld;
+	}
+
 	public WebElement getHomebtn() {
 		return homebtn;
 	}

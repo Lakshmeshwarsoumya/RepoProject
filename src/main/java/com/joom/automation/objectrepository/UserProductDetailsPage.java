@@ -12,8 +12,15 @@ public UserProductDetailsPage(WebDriver driver) {
 	PageFactory.initElements(driver,this);
 }
 
-@FindBy(xpath = "(//a[@class='btn btn-primary'])[1]")
+@FindBy(xpath = "//a[text()=' ADD TO CART']")
 private WebElement addtocartbtn;
+
+@FindBy(xpath="//a[@data-placement='right']")
+private WebElement wishlistBtn;
+
+public WebElement getWishlistBtn() {
+	return wishlistBtn;
+}
 
 public WebElement getAddtocartbtn() {
 	return addtocartbtn;

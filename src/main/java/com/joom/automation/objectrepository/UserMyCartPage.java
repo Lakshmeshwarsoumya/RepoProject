@@ -15,7 +15,15 @@ public class UserMyCartPage {
 	@FindBy(xpath="//button[text()='PROCCED TO CHEKOUT']")
 	private WebElement proceedToCheckoutBtn;
 	
+	@FindBy(xpath="//input[@name='submit']")
+	private WebElement updateShoppingCartBtn;
 	
+	
+	public WebElement getUpdateShoppingCartBtn() {
+		return updateShoppingCartBtn;
+	}
+
+
 	public WebElement getProceedToCheckoutBtn() {
 		return proceedToCheckoutBtn;
 	}

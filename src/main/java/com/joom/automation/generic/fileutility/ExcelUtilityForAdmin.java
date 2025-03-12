@@ -28,5 +28,14 @@ public class ExcelUtilityForAdmin {
 		return lastRowNum;
 
 	}
+	
+	
+		public String gatDataFromExcel(String sheetName,int rowNum, int celNum) throws EncryptedDocumentException, IOException {
+			FileInputStream fis = new FileInputStream("");
+			Workbook wb = WorkbookFactory.create(fis);
+			 String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue().toString();
+			
+			return data;
+		}		
 
 }

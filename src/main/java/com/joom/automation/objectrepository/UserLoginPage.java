@@ -1,5 +1,6 @@
 package com.joom.automation.objectrepository;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +22,7 @@ WebDriver driver;
 	@FindBy(name = "password")
 	private WebElement Passwordtxtfield;
 
-	@FindBy(linkText = "Login")
+	@FindBy(xpath = "//button[text()='Login']")
 	private WebElement loginbtn;
 
 	public WebElement getLoginbtn() {
@@ -36,12 +37,17 @@ WebDriver driver;
 		return Passwordtxtfield;
 	}
    
-	public void LoginAsUser(String username,String password) {
-		getEmailtxtfield().sendKeys(username);
-		getPasswordtxtfield().sendKeys(password);
-		getLoginbtn().click();
+	//public void LoginAsUser(String username,String password) {
+		//getEmailtxtfield().sendKeys(username);
+		//getPasswordtxtfield().sendKeys(password);
+		
+	
+		//getLoginbtn().click();
+	
+	
+	
 	
 		
 	}
 	
-}
+

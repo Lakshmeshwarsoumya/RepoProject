@@ -1,10 +1,11 @@
 package com.joom.automation.baseutility;
 
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
+import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.generic.fileutility.JsonForUserUtility;
 import com.joom.automation.objectrepository.HomePage;
 import com.joom.automation.objectrepository.UserLoginPage;
@@ -26,6 +28,8 @@ public class BaseClassForUser {
 	public WebDriver driver=null;
 	public JsonForUserUtility js;
 	public WebdriverUtility wb;
+	public ExcelUtilityForAdmin elib= new ExcelUtilityForAdmin();
+	
 	
 	@BeforeSuite
 	public void configBS() {
@@ -50,24 +54,36 @@ public class BaseClassForUser {
 			//driver = new ChromeDriver();
 		}
 		driver.get(URL);
-		
+		driver.manage().window().maximize();
 		
 		
 	}
 		
 		@BeforeMethod
-		public void configBM() throws FileNotFoundException, IOException, ParseException {
+		public void configBM() throws IOException, ParseException, InterruptedException {
 			Reporter.log("===enter URL",true);
 			HomePage hp = new HomePage(driver);
+			Thread.sleep(3000);
 			hp.getLoginLink().click();
 
 		
 		js=new JsonForUserUtility();
 		String USERNAME = js.readDataFromJson("username");
+		Thread.sleep(3000);
 		String PASSWORD = js.readDataFromJson("password");
+		Thread.sleep(3000);
 		
 		UserLoginPage ulp = new UserLoginPage(driver);
-		ulp.LoginAsUser(USERNAME, PASSWORD);
+		ulp.getEmailtxtfield().sendKeys(USERNAME);
+		ulp.getPasswordtxtfield().sendKeys(PASSWORD);
+		WebElement ele = ulp.getLoginbtn();
+		//wb.scrollToElement(driver, ele);
+		wb= new WebdriverUtility();
+		wb.scrollByAmountt(driver, ele);
+		ele.click();
+		
+	   
+		
 	}
 		
 		
