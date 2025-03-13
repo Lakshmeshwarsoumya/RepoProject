@@ -15,7 +15,7 @@ import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.SubCategoryPage;
 
-public class CreateSubCategory extends BaseClassForAdmin {
+public class CreateSubCategoryTest extends BaseClassForAdmin {
 	@Test
 	public void insertSubcategory() throws InterruptedException, EncryptedDocumentException, IOException {
 		wlib = new WebdriverUtility();

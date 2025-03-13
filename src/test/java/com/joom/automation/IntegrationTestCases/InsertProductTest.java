@@ -14,7 +14,7 @@ import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.InsertProductPage;
 
-public class InsertProduct extends BaseClassForAdmin {
+public class InsertProductTest extends BaseClassForAdmin {
 	@Test
 	public void insertProduct() throws EncryptedDocumentException, IOException, InterruptedException {
 		adp = new AdminPage(driver);

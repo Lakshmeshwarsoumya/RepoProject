@@ -20,7 +20,7 @@ import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.CreateCategoryPage;
 
-public class CreateCategory extends BaseClassForAdmin {
+public class CreateCategoryTest extends BaseClassForAdmin {
 
 	@Test
 	public void createCategory() throws ParseException, IOException, Throwable {

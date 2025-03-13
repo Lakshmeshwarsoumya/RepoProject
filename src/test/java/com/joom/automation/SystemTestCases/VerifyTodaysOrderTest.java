@@ -9,7 +9,7 @@ import com.joom.automation.WebDriverUtility.WebdriverUtility;
 import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
 
-public class VerifyTodaysOrder extends BaseClassForAdmin {
+public class VerifyTodaysOrderTest extends BaseClassForAdmin {
 	@Test
 	public void todaysOrders() {
 		adp = new AdminPage(driver);

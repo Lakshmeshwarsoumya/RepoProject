@@ -1,4 +1,4 @@
-package com.joom.automation.IntegrationTestCases;
+package com.joom.automation.SmokeTestCases;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.ManageProductsPage;
 
-public class ManageProducts extends BaseClassForAdmin {
+public class ManageProductsTest extends BaseClassForAdmin {
 	@Test
 	public void deleteProducts() throws EncryptedDocumentException, IOException {
 		mpp = new ManageProductsPage(driver);

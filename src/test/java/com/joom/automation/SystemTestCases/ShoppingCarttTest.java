@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
 
-public class ShoppingCartt {
+public class ShoppingCarttTest {
 	WebdriverUtility wb;
 	
 	@Test
