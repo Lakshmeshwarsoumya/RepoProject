@@ -4,13 +4,14 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
 import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.ManageProductsPage;
-
+@Listeners(com.joom.automation.listenerutility.ListenerImplementation.class)
 public class ManageProductsTest extends BaseClassForAdmin {
 	@Test(groups="Smoke")
 	public void deleteProducts() throws EncryptedDocumentException, IOException {

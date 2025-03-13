@@ -2,13 +2,14 @@ package com.joom.automation.SystemTestCases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
 import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
-
+@Listeners(com.joom.automation.listenerutility.ListenerImplementation.class)
 public class VerifyTodaysOrderTest extends BaseClassForAdmin {
 	@Test(groups="System")
 	public void todaysOrders() {

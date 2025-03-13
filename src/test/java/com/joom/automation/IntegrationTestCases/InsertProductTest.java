@@ -6,6 +6,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
@@ -13,7 +14,7 @@ import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.InsertProductPage;
-
+@Listeners(com.joom.automation.listenerutility.ListenerImplementation.class)
 public class InsertProductTest extends BaseClassForAdmin {
 	@Test(groups="Integration")
 	public void insertProduct() throws EncryptedDocumentException, IOException, InterruptedException {

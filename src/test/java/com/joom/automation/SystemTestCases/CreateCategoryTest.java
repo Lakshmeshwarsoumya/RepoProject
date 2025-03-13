@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -19,7 +20,7 @@ import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.CreateCategoryPage;
-
+@Listeners(com.joom.automation.listenerutility.ListenerImplementation.class)
 public class CreateCategoryTest extends BaseClassForAdmin {
 
 	@Test(groups="System")

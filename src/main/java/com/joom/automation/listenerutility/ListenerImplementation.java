@@ -4,7 +4,7 @@ import java.util.Date;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
+
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 
@@ -16,11 +16,11 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.comcast.crm.baseUtility.BaseClass;
-import com.comcast.crm.generic.webdriverutility.JavaUtility;
-import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
+import com.joom.automation.WebDriverUtility.UtilityClassObject;
 
-public class PracticeListenerImplementation implements ITestListener, ISuiteListener {
+import com.joom.automation.generic.fileutility.JavaUtility;
+
+public class ListenerImplementation implements ITestListener, ISuiteListener {
 	public ExtentSparkReporter spark;
 	public ExtentReports report;
 	public static ExtentTest test;
@@ -30,7 +30,7 @@ public class PracticeListenerImplementation implements ITestListener, ISuiteList
 		System.out.println("Report Configuration");
 		// spark report configuration
 		String time = new Date().toString().replace(" ", " _").replace(":", "_");
-		ExtentSparkReporter spark = new ExtentSparkReporter("./AdvanceReport" + "" + time + "/report.html");
+		ExtentSparkReporter spark = new ExtentSparkReporter("./AdvanceReport/report" + time + ".html");
 		spark.config().setDocumentTitle("CRM Test SUite Results");
 		spark.config().setReportName("CRM report");
 		spark.config().setTheme(Theme.DARK);
@@ -72,8 +72,8 @@ public class PracticeListenerImplementation implements ITestListener, ISuiteList
 		String timeStamp = jlib.captureTimeStamp();
 
 		// step-1 create an object to EventFiringWebDriver
-		
-		TakesScreenshot ts = (TakesScreenshot) BaseClass.sdriver;
+
+		TakesScreenshot ts = (TakesScreenshot) UtilityClassObject.getdriver();
 		String temp = ts.getScreenshotAs(OutputType.BASE64);
 
 		String time = new Date().toString().replace(" ", " _").replace(":", "_");
