@@ -12,7 +12,7 @@ import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.objectrepository.ManageProductsPage;
 
 public class ManageProductsTest extends BaseClassForAdmin {
-	@Test
+	@Test(groups="Smoke")
 	public void deleteProducts() throws EncryptedDocumentException, IOException {
 		mpp = new ManageProductsPage(driver);
 		ela = new ExcelUtilityForAdmin();

@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
 
 public class ShoppingCarttTest {
-	WebdriverUtility wb;
+	
 	
 	@Test
 	
 	public void addProductToCart() {
+		WebdriverUtility wb;
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		wb=new WebdriverUtility();

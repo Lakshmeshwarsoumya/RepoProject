@@ -15,7 +15,7 @@ import com.joom.automation.objectrepository.AdminPage;
 import com.joom.automation.objectrepository.InsertProductPage;
 
 public class InsertProductTest extends BaseClassForAdmin {
-	@Test
+	@Test(groups="Integration")
 	public void insertProduct() throws EncryptedDocumentException, IOException, InterruptedException {
 		adp = new AdminPage(driver);
 		ela = new ExcelUtilityForAdmin();

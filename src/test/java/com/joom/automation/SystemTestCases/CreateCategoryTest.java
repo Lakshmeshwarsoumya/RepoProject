@@ -22,7 +22,7 @@ import com.joom.automation.objectrepository.CreateCategoryPage;
 
 public class CreateCategoryTest extends BaseClassForAdmin {
 
-	@Test
+	@Test(groups="System")
 	public void createCategory() throws ParseException, IOException, Throwable {
 		adp = new AdminPage(driver);
 		CreateCategoryPage ccp = new CreateCategoryPage(driver);

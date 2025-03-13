@@ -10,7 +10,7 @@ import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.objectrepository.AdminPage;
 
 public class VerifyTodaysOrderTest extends BaseClassForAdmin {
-	@Test
+	@Test(groups="System")
 	public void todaysOrders() {
 		adp = new AdminPage(driver);
 		adp.todaysOrders();
