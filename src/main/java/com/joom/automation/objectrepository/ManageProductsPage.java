@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageProductsPage {
 
-	@FindBy(xpath = "//a[@href='manage-products.php']")
+	@FindBy(xpath = "//a[contains(text(),'Manage Products')] ")
 	private WebElement manageProductsLink;
 
 	public ManageProductsPage(WebDriver driver) {

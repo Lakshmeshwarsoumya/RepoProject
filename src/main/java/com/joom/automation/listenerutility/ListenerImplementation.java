@@ -4,7 +4,7 @@ import java.util.Date;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
+import org.openqa.selenium.WebDriver;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 
@@ -17,7 +17,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.joom.automation.WebDriverUtility.UtilityClassObject;
-
+import com.joom.automation.baseutility.BaseClassForAdmin;
 import com.joom.automation.generic.fileutility.JavaUtility;
 
 public class ListenerImplementation implements ITestListener, ISuiteListener {
@@ -53,6 +53,7 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 		System.out.println("====== ======>" + result.getMethod().getMethodName() + ">=========");
 		test = report.createTest(result.getMethod().getMethodName());
 		UtilityClassObject.setTest(test);
+
 		test.log(Status.INFO, result.getMethod().getMethodName() + "===> Started");
 
 	}
@@ -72,8 +73,8 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 		String timeStamp = jlib.captureTimeStamp();
 
 		// step-1 create an object to EventFiringWebDriver
-
-		TakesScreenshot ts = (TakesScreenshot) UtilityClassObject.getdriver();
+		
+		TakesScreenshot ts = (TakesScreenshot)BaseClassForAdmin.sdriver;
 		String temp = ts.getScreenshotAs(OutputType.BASE64);
 
 		String time = new Date().toString().replace(" ", " _").replace(":", "_");

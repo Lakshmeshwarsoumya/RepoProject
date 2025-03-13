@@ -14,8 +14,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 
 import com.google.protobuf.TextFormat.ParseException;
+import com.joom.automation.WebDriverUtility.UtilityClassObject;
 import com.joom.automation.WebDriverUtility.WebdriverUtility;
 import com.joom.automation.generic.fileutility.ExcelUtilityForAdmin;
 import com.joom.automation.generic.fileutility.JsonForAdminUtility;
@@ -42,36 +44,38 @@ public class BaseClassForAdmin {
 	public ExcelUtilityForAdmin ela ;
 	public ManageProductsPage mpp;
 	public SubCategoryPage scp;
+	public static WebDriver sdriver=null;
 
-	@BeforeSuite
+	@BeforeSuite(groups={"Integration","System","Smoke"})
 	public void configBS() {
 		Reporter.log("=== Connecting to Database and Configuring Reports ===", true);
 	}
 
-	@BeforeClass
-	public void configBC() throws Throwable {
-		Reporter.log("=== Launching Browser ===", true);
-		jad = new JsonForAdminUtility();
-		String browser = jad.readDataFromJson("browser");
-		String URL = jad.readDataFromJson("url");
+	@BeforeClass(groups={"Integration","System","Smoke"})
+	public void configBC()throws Throwable {
+	    Reporter.log("=== Launching Browser ===", true);
+	    jad = new JsonForAdminUtility();
+	    String browser = jad.readDataFromJson("browser");
+	    String URL = jad.readDataFromJson("url");
 
-		if (browser.equalsIgnoreCase("chrome")) {
-			driver = new ChromeDriver();
-		} else if (browser.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
-		} else if (browser.equalsIgnoreCase("edge")) {
-			driver = new EdgeDriver();
-		} else {
-			Reporter.log("Invalid browser specified. Defaulting to Chrome.", true);
-			driver = new ChromeDriver();
-		}
-
-		driver.manage().window().maximize();
-		driver.get(URL); // ✅ Load URL here
-
+	    if (browser.equalsIgnoreCase("chrome")) {
+	        driver = new ChromeDriver();
+	    } else if (browser.equalsIgnoreCase("firefox")) {
+	        driver = new FirefoxDriver();
+	    } else if (browser.equalsIgnoreCase("edge")) {
+	        driver = new EdgeDriver();
+	    } else {
+	        Reporter.log("Invalid browser specified. Defaulting to Chrome.", true);
+	        driver = new ChromeDriver();
+	    }
+	    sdriver = driver;
+		UtilityClassObject .setDriver(driver);
+	    driver.get(URL);
+	    driver.manage().window().maximize();
+	   
 	}
 
-	@BeforeMethod
+	@BeforeMethod(groups={"Integration","System","Smoke"})
 	public void configBM() throws ParseException, IOException, Throwable {
 		Reporter.log("=== Logging into Application ===", true);
 
@@ -91,7 +95,7 @@ public class BaseClassForAdmin {
 	/**
 	 * Logs out of the application after each test method.
 	 */
-	@AfterMethod
+	@AfterMethod(groups={"Integration","System","Smoke"})
 	public void configAM() {
 		Reporter.log("=== Logging out of Application ===", true);
 		adp = new AdminPage(driver);
@@ -99,13 +103,13 @@ public class BaseClassForAdmin {
 
 	}
 
-	@AfterClass
+	@AfterClass(groups={"Integration","System","Smoke"})
 	public void configAC() {
 		driver.quit();
 
 	}
 
-	@AfterSuite
+	@AfterSuite(groups={"Integration","System","Smoke"})
 	public void configAS() throws SQLException {
 		Reporter.log("=== Closing DB Connection and Generating Reports ===", true);
 

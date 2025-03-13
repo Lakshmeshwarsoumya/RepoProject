@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WebdriverUtility {
 
 	public void waitForPageToLoad(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(70));
 
 	}
 	// Wait until an element is visible

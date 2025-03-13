@@ -5,16 +5,18 @@
 		<listener
 			class-name="com.joom.automation.listenerutility.ListenerImplementation"></listener>
 	</listeners>
-
 	<test thread-count="5" name="Test">
-		<groups>
-			<run>
-				<include name="Smoke"></include>
-			</run>
-		</groups>
 		<classes>
 			<class
+				name="com.joom.automation.IntegrationTestCases.InsertProductTest" />
+			<class
 				name="com.joom.automation.SmokeTestCases.ManageProductsTest" />
+			<class
+				name="com.joom.automation.SystemTestCases.CreateCategoryTest" />
+			<class
+				name="com.joom.automation.IntegrationTestCases.CreateSubCategoryTest" />
+			<class
+				name="com.joom.automation.SystemTestCases.VerifyTodaysOrderTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
